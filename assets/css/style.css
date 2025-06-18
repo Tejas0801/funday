@@ -193,6 +193,18 @@ html{
     scroll-behavior: smooth;
 }
 
+
+/*changes*/
+
+/* .heading{
+    font-family: "Lato" !important;
+} */
+
+.tsub{
+    color:var(--e-global-color-text)!important;
+}
+
+
 /* Home Page */
 
 .header {
