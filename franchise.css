@@ -26,13 +26,38 @@ body {
     line-height: 1.6;
     color: var(--gray-700);
     scroll-behavior: smooth;
+    
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
+
+.fbag {
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  
 }
+.fbag::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/images/LANDING-V1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1; /* Adjust this value (0.1 to 1) for desired transparency */
+  z-index: -1;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
 
 /* Typography */
 .section-title {
@@ -59,6 +84,8 @@ body {
 .text-gold {
     color: var(--franchise-gold);
 }
+
+
 
 /* Buttons */
 .btn {
@@ -105,13 +132,17 @@ body {
 /* Section Styles */
 .section-header {
     text-align: center;
-    margin-bottom: 64px;
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hero Section */
 .hero-section {
     position: relative;
-    background: linear-gradient(135deg, var(--franchise-teal), rgba(59, 104, 102, 0.8));
+
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -119,16 +150,28 @@ body {
     overflow: hidden;
     color: var(--white);
 }
-
-.hero-background {
-    position: absolute;
-    inset: 0;
-    opacity: 0.1;
+ .form-description{
+    font-size: 1rem;
+    max-width: 768px;
+    margin: 0 auto px;
+    line-height: 1.75;
+    font-family: 'Lato', sans-serif!important;
+    font-weight: 100;
+    text-align: left;
+ }
+.form-title{
+     font-family: 'Harvest';
+    font-size: 3rem;
+    color: var(--franchise-gold);
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 50px;
 }
 
 .hero-pattern {
     position: relative;
     height: 100%;
+
 }
 
 .pattern-circle {
@@ -158,18 +201,14 @@ body {
     height: 64px;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-}
+
 
 .hero-text {
     animation: fadeIn 1s ease-out;
 }
 
 .hero-title {
-    font-family: 'Berkshire Swash', cursive;
+    font-family: 'Harvest';
     font-size: 6rem;
     color: var(--franchise-gold);
     margin-bottom: 24px;
@@ -183,10 +222,13 @@ body {
 }
 
 .hero-description {
-    font-size: 1.25rem;
+    font-size: 1rem;
     max-width: 768px;
     margin: 0 auto 48px;
     line-height: 1.75;
+    font-family: 'Lato', sans-serif!important;
+    font-weight: 100;
+    text-align: left;
 }
 
 .hero-buttons {
@@ -195,6 +237,19 @@ body {
     gap: 24px;
     justify-content: center;
     align-items: center;
+    
+}
+
+.button{
+    background-color:#E5BF88;
+    Height:50px;
+    width:150px;
+    color:#3B6866;
+    font-family:'Lato',sans-serif;
+    border-radius:10px;
+    justify-content: center;
+    align-items: center;
+    border-width:0px;
 }
 
 .hero-fade {
