@@ -691,6 +691,8 @@ body {
     .hero-buttons {
         flex-direction: row;
     }
+      
+    
 }
 
 @media (max-width: 480px) {
