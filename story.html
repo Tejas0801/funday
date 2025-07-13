@@ -61,7 +61,7 @@
       
       body {
         font-family: 'Lato', sans-serif;
-        line-height: 1.6;
+        line-height: 2;
         color: #333;
       }
       
@@ -77,18 +77,19 @@
       }
       
       h1, h2, h3 {
-        font-family: 'Berkshire Swash', cursive;
+        font-family: 'Lato', sans-serif;
         color: var(--funday-teal);
       }
       
       h1 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         margin-bottom: 1rem;
         color: var(--funday-cream);
+        font-weight: 300;
       }
       
       h2 {
-        font-size: 2.5rem;
+        font-size:1.5rem;
         margin-bottom: 1.5rem;
       }
       
@@ -100,10 +101,12 @@
       p {
         margin-bottom: 1rem;
         font-size: 1.1rem;
+        font-weight: 400;
+        text-align: left;
       }
       
       .text-center {
-        text-align: center;
+        text-align: left;
       }
       
       /* Hero Section */
@@ -115,7 +118,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -139,16 +142,27 @@
 
       
       .hero-subtitle {
-        font-size: 1.5rem;
-        font-weight: 300;
-        margin-bottom: 1.5rem;
+        font-size: rem;
+        
+        margin-bottom: 0rem;
+       
       }
-      
+      @media screen and (max-width: 768px) {
+        .hero-subtitle {
+         font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        margin-top: 0px;
+        }
+        
+      }
       .hero-description {
         max-width: 800px;
         margin: 0 auto;
         font-size: 1.1rem;
         line-height: 1.7;
+        text-align: left;
       }
       
       /* What Makes Us Section */
@@ -180,8 +194,23 @@
         padding: 1rem 2rem;
         border-radius: 30px;
         font-weight: 500;
+        text-align: center;
         color: var(--funday-teal);
       }
+      @media (max-width: 384px) {
+        .tagline {
+        display: inline-block;
+        background-color: rgba(229, 191, 136, 0.2);
+        padding: 1rem 2rem;
+        border-radius: 30px;
+        font-weight: 300;
+        text-align: center;
+        color: var(--funday-teal);
+        font-size: medium;
+      }
+    }
+
+
       
       /* Born to Spread Smiles Section */
       .story-bg {
@@ -309,7 +338,7 @@
         color: white;
         border-radius: 16px;
         padding: 1.5rem;
-        font-family: 'Berkshire Swash', cursive;
+        font-family: 'lato', sans-serif;
         font-size: 1.25rem;
       }
       
@@ -348,6 +377,64 @@
         animation: float 7s ease-in-out infinite;
         animation-delay: 2s;
       }
+      /* Responsive Header & Nav */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 10px;
+    outline: none;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #000;
+    display: block;
+    height: 3px;
+    margin: 4px 0;
+    width: 25px;
+    border-radius: 2px;
+  }
+
+  .last_list {
+    margin-top: 15px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
       
       @keyframes float {
         0% {
@@ -380,7 +467,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="innerpage">
     <header class="header innerpage-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -401,7 +488,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#story">Our Story</a>
+                            <a class="nav-link" href="story.html">Our Story</a>
                         </li>
                        
                         <li class="nav-item">
@@ -454,7 +541,7 @@
     <section>
       <div class="container">
         <div class="text-center">
-          <h2>🍓 What Makes Us Funday?</h2>
+          <h2>What Makes Us Funday?</h2>
         </div>
         
         <div class="products-grid">
@@ -485,8 +572,7 @@
         
         <div class="text-center">
           <p class="tagline">
-            From sourcing to serving, every Funday treat is made with love, laughter, and a whole lot of chill.
-          </p>
+            "From sourcing to serving, every Funday treat is made with love, laughter, and a whole lot of chill."          </p>
         </div>
       </div>
     </section>

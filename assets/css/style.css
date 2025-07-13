@@ -296,14 +296,19 @@ html{
 }
 /* Inner page header (no scroll effect) */
 header.header.innerpage-header {
-  position: static; /* or fixed if you want it always visible */
+  position: fixed; /* Fixes it to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #ffffff;
   padding: 22px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* subtle shadow */
   z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /
 }
 
-
+body.innerpage {
+  padding-top: 100px; /* adjust based on header height */
+}
 
 
 
