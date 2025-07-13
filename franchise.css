@@ -719,3 +719,51 @@ body {
         padding: 24px;
     }
 }
+
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+
+    .form-title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+        text-align: center;
+    }
+
+    .hero-subtitle,
+    .section-description,
+    .form-description {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .form-wrapper {
+        padding: 24px 16px;
+    }
+
+    .pattern-circle-1,
+    .pattern-circle-2,
+    .pattern-circle-3 {
+        display: none; /* optional: hide decorative patterns on very small screens */
+    }
+}
