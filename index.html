@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body >
 <!-- Back to top button -->
 <a id="button"></a>
 <div class="home1_banner_outer position-relative">
@@ -445,6 +445,18 @@
     </div>
   </div>
 </div>
+<script>
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('.header');
+
+    // Show the header only after 100px scroll
+    if (window.scrollY > 100) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  });
+</script>
 
 </body>
 </html>

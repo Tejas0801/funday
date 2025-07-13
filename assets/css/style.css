@@ -283,16 +283,39 @@ html{
   background-color: var(--e-global-color-accent);
 }
 
-/* Home Page */
-
+/* Common header style without position */
 .header {
-    padding: 22px 0px;
-    background-color: #ffffff;
-    z-index: 1000;
-    position: sticky; /* or fixed */
-    top: 0;
-    width: 100%;
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
+  padding: 22px 0px;
+  transition: top 0.3s ease-in-out;
 }
+/* Inner page header (no scroll effect) */
+header.header.innerpage-header {
+  position: static; /* or fixed if you want it always visible */
+  background-color: #ffffff;
+  padding: 22px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* subtle shadow */
+  z-index: 1000;
+}
+
+
+
+
+
+.header.sticky {
+  top: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-content, .hero-section, .next-section {
+  padding-top: 120px;
+}
+
 
 .nav-link{
     font-size: 32px
