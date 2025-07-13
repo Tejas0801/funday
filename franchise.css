@@ -720,7 +720,7 @@ body {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 300px) {
     .hero-title {
         font-size: 2rem;
         line-height: 2.5rem;
